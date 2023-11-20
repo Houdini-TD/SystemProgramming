@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
+#include "MyString.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Ru");
+    MyString str("в9ыфв213ыф9вфы3в99ф91");
+    str.update();
+    str.print();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
