@@ -1,16 +1,47 @@
-﻿// Kr3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+﻿//// Kr3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+////
 //
+//#include <iostream>
+//#include "MyString.h"
+//
+//int main()
+//{
+//    setlocale(LC_ALL, "Ru");
+//    MyString str("в9ыфв213ыф9вфы3в99ф91");
+//    str.update();
+//    str.print();
+//}
 
 #include <iostream>
 #include "MyString.h"
+using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Ru");
-    MyString str("в9ыфв213ыф9вфы3в99ф91");
-    str.update();
-    str.print();
+    setlocale(LC_ALL, "ru");
+    MyString str1;
+    str1.set("Строка номер один");
+    str1.print();
+
+    MyString str2("1Строка333 666номер999 2");
+    str2.print();
+
+    MyString str3 = str2;
+    cout << "\nНиже не строка 2, а строка 3 в которую скопировали строку 2" << endl;
+    str3.print();
+
+    cout << "\nОбновляем по заданию строку 2:" << endl;
+    str2.update();
+    str2.print();
+
+    // Демонстрация деструктора
+    {
+        MyString str4("Temporary String");
+    } // str4 выходит из области видимости и вызывается деструктор
+
+    return 0;
 }
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

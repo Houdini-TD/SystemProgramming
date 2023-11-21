@@ -72,9 +72,9 @@ void MyString::update()
 void MyString::print()
 {
     if (data) {
-        cout << "String: " << data << endl;
+        cout << "\nString: " << data << endl;
     }
     else {
-        cout << "String is empty." << endl;
+        cout << "\nString is empty." << endl;
     }
 }

@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "RVector.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	RVector vector1(3,5,8);
+	RVector vector2(4.5, 2, 1.2);
+
+	(vector1 + vector2).display();
+	(vector1 - vector2).display();
+	(vector1 * vector2).display();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

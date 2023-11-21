@@ -10,6 +10,8 @@ private:
 public:
     RVector();
     RVector(double x, double y, double z);
+    ~RVector();
+    RVector(const RVector& other);
 
     void display() const;
 
