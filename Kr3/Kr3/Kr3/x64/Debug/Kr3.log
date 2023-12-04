@@ -1,2 +1,5 @@
 ﻿  Kr3.cpp
+  MyString.cpp
+D:\MyProjects\Ucheba\4kurs\SystemProgramming\Kr3\Kr3\Kr3\MyString.cpp(47,30): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Создание кода...
   Kr3.vcxproj -> D:\MyProjects\Ucheba\4kurs\SystemProgramming\Kr3\Kr3\x64\Debug\Kr3.exe

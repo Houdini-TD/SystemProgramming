@@ -29,3 +29,13 @@ RVector RVector::operator-(const RVector& other) const {
 RVector RVector::operator*(const RVector& other) const {
     return RVector(y * other.z - z * other.y, z * other.x - x * other.z, x * other.y - y * other.x);
 }
+
+RVector RVector::operator=(const RVector& other) {
+    if (this != &other) { 
+        x = other.x;
+        y = other.y;
+        z = other.z;
+    }
+    return *this;
+}
+

@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstring>
 #include <fstream>
+#include <string>
 #define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
@@ -64,10 +65,27 @@ void MyString::update()
             }
         }
 
+        cout << "¬ведите название файла: ";
+        string fileName;
+        getline(cin, fileName);
+
+        writeToFile(data, "Old value: ", fileName);
+        writeToFile(newData, "New value: ", fileName);
         delete[] data;
         data = newData;
     }
 }
+
+void MyString::writeToFile(const char* str, std::string hint, string fileName) {
+    std::ofstream file(fileName, std::ios_base::app);
+    if (file.is_open()) {
+        file << hint << ": " << str << std::endl;
+        file.close();
+        cout << "String saved to 'output.txt'." << endl;
+    }
+}
+
+
 
 void MyString::print()
 {

@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
 #include <cstring>
+#include <string>
 #include <fstream>
 class MyString
 {
 private:
+	void writeToFile(const char* str, std::string hint, std::string fileName);
 	char* data;
 public:
 	MyString();
