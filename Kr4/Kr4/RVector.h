@@ -20,4 +20,6 @@ public:
     RVector operator-(const RVector& other) const;
 
     RVector operator*(const RVector& other) const;
+
+    RVector operator=(const RVector& other) ;
 };

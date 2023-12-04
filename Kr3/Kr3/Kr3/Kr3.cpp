@@ -23,10 +23,14 @@ int main()
     str1.set("Строка номер один");
     str1.print();
 
-    MyString str2("1Строка333 666номер999 2");
+    string fileName;
+    getline(cin, fileName);
+    MyString str2(fileName.c_str());
     str2.print();
 
     MyString str3 = str2;
+
+    MyString str3(str2);
     cout << "\nНиже не строка 2, а строка 3 в которую скопировали строку 2" << endl;
     str3.print();
 
